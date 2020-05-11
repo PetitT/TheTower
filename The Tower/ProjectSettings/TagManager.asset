@@ -8,6 +8,8 @@ TagManager:
   - LoseStuff
   - Instantiator
   - Char
+  - WallRight
+  - WallLeft
   layers:
   - Default
   - TransparentFX

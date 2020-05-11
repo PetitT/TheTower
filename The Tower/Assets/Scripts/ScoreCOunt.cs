@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreCOunt : MonoBehaviour
+public class ScoreCount : MonoBehaviour
 {
     private float score;
     public Text text;
@@ -20,14 +20,16 @@ public class ScoreCOunt : MonoBehaviour
     private void DisplayScore()
     {
         int currentScore = (int)score;
-        text.text = score.ToString();
+        text.text = score.ToString("00.00");
     }
 
     private void AddScore()
     {
         float currentPos = gameObject.transform.position.y;
         if (tempYPos < currentPos)
+        {
             score += scoreToAdd * Time.deltaTime;
+        }
         tempYPos = transform.position.y;
     }
 }
